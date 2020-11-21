@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+body {
+  background: #e5eff5;
+  font-family: 'karla', arial; }
+
+ul {
+  list-style: none;
+  padding: 0; }
+
+a {
+  text-decoration: none;
+  color: #fff; }
+
+.grid-components {
+  display: grid;
+  grid-template-columns: 2fr;
+  position: fixed;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0.5px 0.5px 15px rgba(0, 0, 0, 0.3);
+  border-radius: 10px 10px 10px 10px; }
+  .grid-components .component-1 {
+    background: #fff;
+    width: 650px;
+    padding: 30px;
+    border-radius: 10px 10px 0 0; }
+    .grid-components .component-1 .title {
+      font-size: 28px;
+      color: #2ab2af; }
+    .grid-components .component-1 .txt-1 {
+      color: #c0df34;
+      font-size: 19px; }
+    .grid-components .component-1 .txt-2 {
+      color: #98a6bd; }
+  .grid-components .component-2 {
+    color: #fff;
+    background: #2ab2af;
+    width: 650px;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-radius: 0 0 10px 10px; }
+    .grid-components .component-2 .part-1 .price {
+      font-size: 30px;
+      font-weight: 700;
+      margin: 0;
+      margin-right: 15px; }
+    .grid-components .component-2 .part-1 span {
+      display: flex;
+      align-items: center; }
+    .grid-components .component-2 .part-1 .per-month {
+      color: #e5eff5;
+      font-size: 14px; }
+    .grid-components .component-2 .part-1 p {
+      opacity: 0.8; }
+    .grid-components .component-2 .part-1 .btn {
+      background: #c0df34;
+      padding: 15px 90px;
+      border-radius: 5px;
+      display: inline-block;
+      margin-top: 20px;
+      box-shadow: 0.5px 0.5px 9px rgba(0, 0, 0, 0.3);
+      transition: 0.5s; }
+      .grid-components .component-2 .part-1 .btn:hover {
+        opacity: 0.9; }
+    .grid-components .component-2 .part-2 {
+      position: relative;
+      padding-left: 60px;
+      border-left: 2px dashed #c0df34; }
+      .grid-components .component-2 .part-2 ul li {
+        padding: 2px 0; }
+
+#main-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: #2ab2af;
+  padding: 10px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 18px;
+  color: #fff; }
+  #main-footer .solution,
+  #main-footer .challenge {
+    color: #c0df34;
+    font-weight: 700; }
+
+@media (max-width: 375px) {
+  .grid-components {
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+    position: static;
+    width: 100%;
+    border-radius: none;
+    box-shadow: none;
+    justify-content: center; }
+    .grid-components .component-1 {
+      width: 295px; }
+    .grid-components .component-2 {
+      grid-template-columns: 1fr;
+      width: 295px;
+      border-radius: 0; }
+      .grid-components .component-2 .part-1 p {
+        margin: 12px 0; }
+      .grid-components .component-2 .btn {
+        margin-bottom: 8px;
+        width: 30%;
+        text-align: center; }
+      .grid-components .component-2 .part-2 {
+        border-left: none;
+        padding-left: 0; }
+
+  #main-footer {
+    position: static;
+    flex-direction: column;
+    text-align: center;
+    padding: 5px;
+    width: 345px;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: 600; } }
+@media (max-width: 360px) {
+  #main-footer {
+    width: 335px; } }
+@media (max-width: 320px) {
+  #main-footer {
+    width: 312px; } }
+
+/*# sourceMappingURL=style.css.map */

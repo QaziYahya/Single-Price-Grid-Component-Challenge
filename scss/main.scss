@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+//Colors:
+$cyan-color: hsl(179, 62%, 43%);
+$bright-yellow: hsl(71, 73%, 54%);
+$light-gray: hsl(204, 43%, 93%);
+$grayish-blue: hsl(218, 22%, 67%);
+
+body {
+  background: $light-gray;
+  font-family: 'karla', arial;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.grid-components {
+  display: grid;
+  grid-template-columns: 2fr;
+  position: fixed;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0.5px 0.5px 15px rgba(0, 0, 0, 0.3);
+  border-radius: 10px 10px 10px 10px;
+
+  //First Component
+
+  .component-1 {
+    background: #fff;
+    width: 650px;
+    padding: 30px;
+    border-radius: 10px 10px 0 0;
+
+    .title {
+      font-size: 28px;
+      color: $cyan-color;
+    }
+    .txt-1 {
+      color: $bright-yellow;
+      font-size: 19px;
+    }
+    .txt-2 {
+      color: $grayish-blue;
+    }
+  }
+
+  //Second Component
+
+  .component-2 {
+    color: #fff;
+    background: $cyan-color;
+    width: 650px;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-radius: 0 0 10px 10px;
+    .part-1 {
+      .price {
+        font-size: 30px;
+        font-weight: 700;
+        margin: 0;
+        margin-right: 15px;
+      }
+      span {
+        display: flex;
+        align-items: center;
+      }
+      .per-month {
+        color: $light-gray;
+        font-size: 14px;
+      }
+      p {
+        opacity: 0.8;
+      }
+      .btn {
+        background: $bright-yellow;
+        padding: 15px 90px;
+        border-radius: 5px;
+        display: inline-block;
+        margin-top: 20px;
+        box-shadow: 0.5px 0.5px 9px rgba(0, 0, 0, 0.3);
+        transition: 0.5s;
+
+        &:hover {
+          opacity: 0.9;
+        }
+      }
+    }
+    .part-2 {
+      position: relative;
+      padding-left: 60px;
+      ul li {
+        padding: 2px 0;
+      }
+      border-left: 2px dashed $bright-yellow;
+    }
+  }
+}
+
+//Footer
+
+#main-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: $cyan-color;
+  padding: 10px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 18px;
+  color: #fff;
+  .solution,
+  .challenge {
+    color: $bright-yellow;
+    font-weight: 700;
+  }
+}
+
+@import 'mobile';
